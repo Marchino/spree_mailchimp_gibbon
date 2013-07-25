@@ -1,5 +1,6 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 
+
 <h1><%= t('mailchimp_settings') %></h1>
 
 <table>
@@ -17,7 +18,7 @@
 <h4><%= t("mailchimp_send_welcome") %>: <%= Spree::Config[:mailchimp_send_welcome]? t('yes') : t('no') %></h4>
 <h4><%= t("mailchimp_send_notify") %>: <%= Spree::Config[:mailchimp_send_notify]? t('yes') : t('no') %></h4>
 <% unless Spree::Config[:mailchimp_merge_vars].blank? %>
-    <h4><%= t("mailchimp_merge_vars") %></h4>
+    <h4><%= Spree.t("mailchimp_merge_vars") %></h4>
     <p>
     <%= raw Spree::Config[:mailchimp_merge_vars].gsub(/,/, '<br >') %>
     </p>
